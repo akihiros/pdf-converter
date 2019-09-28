@@ -1,0 +1,6 @@
+/jpg/
+/pdf/
+/pdf2txt.py
+__pycache__
+*.pdf
+*.txt
