@@ -1,12 +1,12 @@
 # PDF to Text
 
-PDFからtxtファイルを生成するサンプルコード。
+PDFからtxtファイルを生成する簡易サンプルコード。
 
 - pdfminer：pdf→text
 - pdf2image：pdf→image
 - OCR：image→text
 
-## Tutorial
+## How to use
 
 Python 3.6.9 :: Anaconda, Inc.
 
@@ -14,41 +14,18 @@ Python 3.6.9 :: Anaconda, Inc.
 
 [pdfminer/pdfminer.six: Python PDF Parser -- fork with Python 2+3 support using six](https://github.com/pdfminer/pdfminer.six)
 
-- install 
+- Request 
     - `pip install pdfminer.six`
     - `pip install chardet`
 
-- run test code
+- Run test code
   - `python pdf2txt.py simple1.pdf`
 
 pdf2txt.pyのpathは環境によって異なるので注意。Anacondaであれば`C:\Users\ユーザー名\Anaconda3\envs\環境名\Scripts/pdf2txt.py`等。
 
 used [this](https://github.com/pdfminer/pdfminer.six/blob/master/samples/simple1.pdf) in the sample.
 
-If successful, a string is displayed on the terminal.
-
-```
-Hello
-Hello
-Hello
-Hello
-
-World
-
-Hello
-
-World
-
-H e l l o
-
-W o r l d
-
-H e l l o
-
-W o r l d
-```
-
-- run
+- Run
   - `python mypdf2txt.py test.pdf test.txt`
   - You need to prepare the pdf file you want to convert.
 
@@ -56,15 +33,20 @@ W o r l d
 
 [Belval/pdf2image: A python module that wraps the pdftoppm utility to convert PDF to PIL Image object](https://github.com/Belval/pdf2image)
 
-- install
+- Request
   - conda install pillow / pip install pillow
   - conda install -c conda-forge poppler / [Poppler for Windows](http://blog.alivate.com.au/poppler-windows/)
   - pip install pdf2image
 
-- run
+- Run
   - `python mypdf2image.py`
-  - You need to prepare the pdf/*.pdf you want to convert.
+  - デフォルトの入力パスと出力パスが使用されます。
+  
+- Option
+  - `python mypdf2image.py pdf/test.pdf jpg/test`
+  - 第1引数に変換したいpdfのパス、第二引数に変換後のパスをしていしてください。変換後の画像は、指定した名前の後に1から順に番号が振られます。
+    - jpg/test_1.jpg, jpg/test_2.jpg ...
 
 ### OCR
 
-not yet.
+そのうち
