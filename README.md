@@ -1,4 +1,4 @@
-# PDF to Text
+# PDF to Text / PDF to Image / Image to Text
 
 PDFからtxtファイルを生成する簡易サンプルコード。
 
@@ -27,7 +27,7 @@ used [this](https://github.com/pdfminer/pdfminer.six/blob/master/samples/simple1
 
 - Run
   - `python mypdf2txt.py test.pdf test.txt`
-  - You need to prepare the pdf file you want to convert.
+  - 第一引数に変換したいpdfのパス、第二引数に変換後のテキストのパスを指定してください。
 
 ### pdf2image
 
@@ -44,8 +44,8 @@ used [this](https://github.com/pdfminer/pdfminer.six/blob/master/samples/simple1
   
 - Option
   - `python mypdf2image.py pdf/test.pdf jpg/test`
-  - 第1引数に変換したいpdfのパス、第二引数に変換後のパスをしていしてください。変換後の画像は、指定した名前の後に1から順に番号が振られます。
-    - jpg/test_1.jpg, jpg/test_2.jpg ...
+  - 第1引数に変換したいpdfのパス、第二引数に変換後のパスを指定してください。変換後の画像は、指定した名前の後に1から順に番号が振られます（拡張子を付けないように注意）。
+    - jpg/test_1.jpg, jpg/test_2.jpg, jpg/test_3.jpg ...
 
 ### OCR
 

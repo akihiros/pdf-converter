@@ -14,8 +14,7 @@ python mypdf2image.py input_path output_path
 
 print(help)
 
-# コマンドライン引数からパスを指定
-# なければデフォルトの値を使用
+# コマンドライン引数からパスを指定可能
 args = sys.argv
 if len(args) > 1:
     files = args
@@ -24,13 +23,11 @@ if len(args) > 1:
         args.pop(-1)
     args.pop(0)
 else:
-    os.makedirs('jpg', exist_ok=True)  # jpgフォルダを作成
-    os.makedirs('pdf', exist_ok=True)  # pdfフォルダを作成
-    args = glob.glob('pdf/*.pdf')  # デフォルトのinput
+    os.makedirs('jpg', exist_ok=True)
+    os.makedirs('pdf', exist_ok=True)
+    args = glob.glob('pdf/*.pdf')
 
 # pdfを画像に変換
-# 引数指定がなければデフォルトのoutputを使用
-# 画像名は1から順に番号を振る形式
 for path in args:
     images = convert_from_path(path)
 
