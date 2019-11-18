@@ -38,6 +38,8 @@ used [this](https://github.com/pdfminer/pdfminer.six/blob/master/samples/simple1
   - conda install -c conda-forge poppler / [Poppler for Windows](http://blog.alivate.com.au/poppler-windows/)
   - pip install pdf2image
 
+condaを使用しない場合、poppler-0.68.0\binにシステムPathを通してください。
+
 - Run
   - `python mypdf2image.py`
   - デフォルトの入力パスと出力パスが使用されます。
