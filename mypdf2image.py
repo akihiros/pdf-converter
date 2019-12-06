@@ -30,7 +30,7 @@ if len(args) > 1:
 # If no path is specified, use the default path
 # files = args if os.path.exists(args[0]) else glob.glob('pdf/*.pdf')
 
-files = glob.glob('pdf/*.pdf')
+files = glob.glob('cvpr2018_pdf/*.pdf')
 # files = glob.glob('../clone-code/pytorch_advanced_origin/2_objectdetection/data/cvpr2019/*.pdf')
 
 print(files)
@@ -43,7 +43,7 @@ for path in files:
         if 'output' in locals():
             image.save(output + '_{}.jpg'.format(i), 'jpeg')
         else:
-            image.save('jpg/{}_{}.jpg'.format(path.replace('pdf/', '').replace('.pdf', ''), i).replace('pdf\\', ''), 'jpeg')
+            image.save('cvpr2018_jpg/{}_{}.jpg'.format(path.replace('pdf/', '').replace('.pdf', ''), i).replace('pdf\\', ''), 'jpeg')
             # image.save('../clone-code/pytorch_advanced_origin/2_objectdetection/data/cvpr2019/{}.png'.format(i), 'png')
 
     print('{} complete!'.format(path))

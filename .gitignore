@@ -6,3 +6,4 @@ __pycache__
 *.txt
 venv
 poppler-0.68.0
+/cvpr2018_jpg/
